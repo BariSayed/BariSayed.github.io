@@ -1,1 +1,0 @@
-Export your Word CV to PDF, name it cv.pdf, and place it in this folder (files/cv.pdf).
