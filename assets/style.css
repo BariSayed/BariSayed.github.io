@@ -1,0 +1,102 @@
+:root{
+  --accent:#0b5c6b;        /* deep teal - academic, calm */
+  --accent-dark:#083f49;
+  --ink:#1c2426;
+  --muted:#5e6b70;
+  --line:#e4e9eb;
+  --bg:#ffffff;
+  --bg-soft:#f6f9fa;
+  --max:960px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  line-height:1.6;font-size:16px;
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* header / nav */
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;min-height:58px;flex-wrap:wrap}
+.brand{font-weight:700;font-size:1.05rem;color:var(--ink)}
+.nav{display:flex;gap:18px;flex-wrap:wrap}
+.nav a{color:var(--muted);font-size:.92rem;font-weight:500}
+.nav a:hover{color:var(--accent);text-decoration:none}
+.navtoggle,.navbtn{display:none}
+
+/* hero */
+.hero{background:var(--bg-soft);border-bottom:1px solid var(--line);padding:46px 0}
+.hero-grid{display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+.hero-photo img{width:180px;height:180px;object-fit:cover;border-radius:50%;
+  border:4px solid #fff;box-shadow:0 2px 14px rgba(0,0,0,.12)}
+.hero-text h1{margin:0 0 4px;font-size:2rem;letter-spacing:-.3px}
+.hero-text .role{margin:0 0 8px;font-weight:600;color:var(--accent)}
+.hero-text .affil{margin:2px 0;color:var(--muted);font-size:.95rem}
+.links{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.links a{display:inline-block;padding:6px 13px;border:1px solid var(--accent);
+  border-radius:20px;font-size:.85rem;color:var(--accent);background:#fff}
+.links a:hover{background:var(--accent);color:#fff;text-decoration:none}
+
+/* blocks */
+.block{padding:36px 0;border-bottom:1px solid var(--line)}
+.block:last-child{border-bottom:none}
+h2{font-size:1.5rem;margin:0 0 18px;padding-bottom:8px;border-bottom:3px solid var(--accent);display:inline-block}
+h3{font-size:1.12rem;margin:26px 0 12px;color:var(--accent-dark)}
+h4{margin:0 0 6px;font-size:1rem}
+p{margin:0 0 12px}
+.muted{color:var(--muted);font-size:.9rem}
+
+/* lists */
+.tag-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:9px}
+.tag-list li{background:var(--bg-soft);border:1px solid var(--line);
+  padding:6px 13px;border-radius:18px;font-size:.88rem}
+.edu-list{list-style:none;padding:0;margin:0}
+.edu-list li{padding:10px 0;border-bottom:1px dashed var(--line)}
+.edu-list .when{float:right;color:var(--muted);font-size:.85rem}
+.plain{padding-left:20px}
+.plain li{margin-bottom:9px}
+
+/* repos */
+.repo-list{list-style:none;padding:0;margin:0}
+.repo-list li{padding:12px 14px;margin-bottom:10px;background:var(--bg-soft);
+  border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px}
+
+/* publications */
+.pub-list{padding-left:22px;margin:0}
+.pub-list li{margin-bottom:14px;line-height:1.55}
+.pub-list .doi{font-size:.84rem;word-break:break-all}
+.badge{display:inline-block;background:var(--accent);color:#fff;font-size:.72rem;
+  padding:2px 8px;border-radius:10px;margin-left:4px;vertical-align:middle;white-space:nowrap}
+.badge.warn{background:#c0632a}
+
+/* table */
+.teach-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.92rem}
+.teach-table th,.teach-table td{border:1px solid var(--line);padding:9px 12px;text-align:left}
+.teach-table th{background:var(--bg-soft);font-weight:600}
+
+/* buttons / contact */
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:9px 20px;
+  border-radius:6px;font-weight:600}
+.btn:hover{background:var(--accent-dark);text-decoration:none}
+.contact{font-style:normal;line-height:1.9;background:var(--bg-soft);
+  border:1px solid var(--line);border-radius:8px;padding:18px 22px;display:inline-block}
+code{background:var(--bg-soft);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:.85em}
+
+/* footer */
+.site-footer{background:var(--ink);color:#cdd7da;padding:22px 0;font-size:.85rem}
+.site-footer a{color:#9fd3dc}
+
+/* responsive */
+@media(max-width:720px){
+  .navbtn{display:block;cursor:pointer;font-size:1.5rem;color:var(--ink)}
+  .nav{display:none;width:100%;flex-direction:column;gap:10px;padding:10px 0}
+  .navtoggle:checked ~ .nav{display:flex}
+  .hero-grid{flex-direction:column;text-align:center}
+  .links{justify-content:center}
+  .hero-text h1{font-size:1.6rem}
+  .edu-list .when{float:none;display:block}
+}
