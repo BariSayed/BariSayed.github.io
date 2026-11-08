@@ -142,3 +142,4 @@ code{background:var(--soft2);border-radius:5px;padding:1px 6px;font-size:.85em}
 }
 
 .pub-list .pdesc{color:var(--muted);font-size:.9rem;margin:5px 0 3px}
+.badge.priv{background:#6e7781}
