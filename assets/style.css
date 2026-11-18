@@ -175,3 +175,5 @@ code{background:var(--soft2);border-radius:5px;padding:1px 6px;font-size:.85em}
 /* bold research project titles */
 #research .pub-list > li{font-weight:600}
 #research .pub-list > li .pdesc{font-weight:400}
+/* bold DOI/links for easy clicking */
+.doi a{font-weight:600}
