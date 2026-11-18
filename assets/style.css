@@ -150,3 +150,16 @@ code{background:var(--soft2);border-radius:5px;padding:1px 6px;font-size:.85em}
 }
 /* hero tagline */
 .hero-text .tagline{margin:16px 0 2px;font-family:"Spectral",Georgia,serif;font-style:italic;font-size:1.08rem;line-height:1.5;color:rgba(255,255,255,.92);max-width:560px;border-left:3px solid rgba(255,255,255,.55);padding-left:12px}
+
+/* collapsible lists */
+.pub-list li.hid,.plain li.hid{display:none}
+.more-btn{margin:12px 0 2px;background:transparent;border:1.5px solid var(--amber);color:var(--amber);font-family:"Inter",sans-serif;font-weight:600;font-size:.82rem;padding:7px 18px;border-radius:30px;cursor:pointer;transition:.2s}
+.more-btn:hover{background:var(--amber);color:#fff}
+/* hover lift on hero social buttons */
+.social a{transition:transform .2s ease,background .2s ease,color .2s ease}
+.social a:hover{transform:translateY(-2px)}
+/* two-column lists on wide screens */
+@media(min-width:760px){
+  #membership ul.plain,#research ul.plain{columns:2;column-gap:44px}
+  #membership ul.plain li,#research ul.plain li{break-inside:avoid;-webkit-column-break-inside:avoid}
+}
