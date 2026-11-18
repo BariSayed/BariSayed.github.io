@@ -26,7 +26,7 @@ section{scroll-margin-top:70px}
 .navtoggle,.navbtn{display:none}
 
 /* HERO */
-.hero{position:relative;background:linear-gradient(135deg,#0b4f5e 0%,#0e7490 55%,#1596b5 100%);color:#eaf6f9;padding:70px 0 120px;overflow:hidden}
+.hero{position:relative;background:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px) 0 0/22px 22px,linear-gradient(135deg,#0a1626 0%,#10344a 50%,#0e7490 118%);color:#eaf6f9;padding:70px 0 120px;overflow:hidden}
 .hero::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:70px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 70' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' d='M0,32 C240,80 480,0 720,24 C960,48 1200,72 1440,36 L1440,70 L0,70 Z'/%3E%3C/svg%3E") no-repeat;background-size:cover}
 .hero-grid{display:flex;gap:44px;align-items:center;flex-wrap:wrap;position:relative;z-index:2}
 .hero-photo img{width:210px;height:210px;object-fit:cover;border-radius:50%;border:6px solid rgba(255,255,255,.18);box-shadow:0 10px 36px rgba(0,0,0,.28)}
@@ -163,3 +163,12 @@ code{background:var(--soft2);border-radius:5px;padding:1px 6px;font-size:.85em}
   #membership ul.plain,#research ul.plain{columns:2;column-gap:44px}
   #membership ul.plain li,#research ul.plain li{break-inside:avoid;-webkit-column-break-inside:avoid}
 }
+
+/* About scannable grid */
+#about .lead{font-size:1.15rem;line-height:1.6;color:var(--ink);max-width:840px;margin:0 0 22px}
+#about .about-grid{display:grid;gap:0;max-width:880px;margin:0 0 18px;border-top:1px solid var(--line)}
+#about .about-grid > div{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:12px 0;border-bottom:1px solid var(--line)}
+#about .about-grid .k{color:var(--teal-d);font-weight:700;font-family:"Inter",sans-serif;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;padding-top:3px}
+#about .about-grid > div > span:last-child{color:var(--body);font-size:.98rem;line-height:1.52}
+#about .about-note{color:var(--muted);font-size:.92rem;margin:0 0 4px}
+@media(max-width:600px){#about .about-grid > div{grid-template-columns:1fr;gap:3px}}
