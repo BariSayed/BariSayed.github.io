@@ -30,3 +30,20 @@ secs.forEach(s=>no.observe(s));
 const btn=document.getElementById('top-btn');
 window.addEventListener('scroll',()=>{btn.classList.toggle('show',window.scrollY>500);});
 btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+// collapsible long lists
+document.querySelectorAll('[data-collapse]').forEach(function(list){
+  var n=+list.dataset.collapse;
+  var items=[].slice.call(list.children).filter(function(el){return el.tagName==='LI';});
+  if(items.length<=n){return;}
+  items.forEach(function(li,i){ if(i>=n){ li.classList.add('hid'); } });
+  var btn=document.createElement('button');
+  btn.className='more-btn';
+  btn.textContent='Show all ('+items.length+') \u25be';
+  btn.addEventListener('click',function(){
+    var collapsed=items.some(function(li){return li.classList.contains('hid');});
+    items.forEach(function(li,i){ if(i>=n){ li.classList.toggle('hid', !collapsed); } });
+    btn.textContent=collapsed?('Show less \u25b4'):('Show all ('+items.length+') \u25be');
+  });
+  list.insertAdjacentElement('afterend',btn);
+});
