@@ -49,12 +49,12 @@ section{scroll-margin-top:70px}
 .stat .lab{font-size:.74rem;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.04em}
 
 /* BLOCKS */
-.block{padding:56px 0}
+.block{padding:38px 0}
 .block.alt{background:var(--soft)}
 .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:700;color:var(--teal-l);font-family:"Inter",sans-serif;margin:0 0 6px}
-.block h2{font-size:1.9rem;margin:0 0 26px;position:relative}
+.block h2{font-size:1.9rem;margin:0 0 16px;position:relative}
 .block h2::after{content:"";display:block;width:52px;height:4px;background:var(--amber);border-radius:3px;margin-top:12px}
-h3{font-size:1.2rem;margin:30px 0 14px;color:var(--teal-d)}
+h3{font-size:1.2rem;margin:22px 0 10px;color:var(--teal-d)}
 .lead{font-size:1.1rem;color:var(--ink)}
 .muted{color:var(--muted);font-size:.9rem}
 
@@ -88,7 +88,7 @@ h3{font-size:1.2rem;margin:30px 0 14px;color:var(--teal-d)}
 .selected .card{border-left:4px solid var(--teal)}
 .selected .jrnl{font-style:italic;color:var(--teal-d);font-size:.9rem}
 .pub-list{list-style:none;counter-reset:p;padding:0;margin:0}
-.pub-list li{position:relative;padding:16px 16px 16px 54px;border-bottom:1px solid var(--line)}
+.pub-list li{position:relative;padding:11px 14px 11px 50px;border-bottom:1px solid var(--line)}
 .pub-list li::before{counter-increment:p;content:counter(p);position:absolute;left:14px;top:16px;width:28px;height:28px;background:var(--soft2);color:var(--teal-d);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;font-family:"Inter",sans-serif}
 .pub-list li:hover{background:var(--soft)}
 .pub-list .doi{font-size:.84rem;word-break:break-word}
@@ -99,7 +99,7 @@ h3{font-size:1.2rem;margin:30px 0 14px;color:var(--teal-d)}
 
 /* plain lists */
 .plain{list-style:none;padding:0;margin:0}
-.plain li{position:relative;padding:9px 0 9px 26px;border-bottom:1px dashed var(--line)}
+.plain li{position:relative;padding:6px 0 6px 24px;border-bottom:1px dashed var(--line)}
 .plain li::before{content:"\f0da";font-family:"Font Awesome 6 Free";font-weight:900;color:var(--teal-l);position:absolute;left:4px;top:11px;font-size:.8rem}
 .plain.award li::before{content:"\f559";color:var(--amber)}
 
