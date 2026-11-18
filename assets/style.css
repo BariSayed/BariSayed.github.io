@@ -177,3 +177,4 @@ code{background:var(--soft2);border-radius:5px;padding:1px 6px;font-size:.85em}
 #research .pub-list > li .pdesc{font-weight:400}
 /* bold DOI/links for easy clicking */
 .doi a{font-weight:600}
+.pub-list .ptalk{margin-top:5px;font-size:.93rem;color:var(--body);line-height:1.5}
